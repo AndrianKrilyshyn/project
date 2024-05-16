@@ -10,7 +10,7 @@ public interface LectureService {
     List<Lecture> findAll();
     Lecture addLecture(Lecture lecture);
     Lecture findByGroupName(String group);
-    Optional<Lecture> findById(Long id);
+    Lecture findById(Long id);
     Lecture updateLecture(Lecture lecture);
     void deleteLecture(Long id);
 }

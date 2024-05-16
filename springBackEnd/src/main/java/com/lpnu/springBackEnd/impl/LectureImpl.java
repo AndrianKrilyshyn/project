@@ -28,13 +28,12 @@ public class LectureImpl implements LectureService {
 
     @Override
     public Lecture findByGroupName(String group) {
-        Lecture byGroupName = repository.findByGroupName(group);
-        return byGroupName;
+        return repository.findByGroupName(group);
     }
 
     @Override
-    public Optional<Lecture> findById(Long id) {
-        return repository.findById(id);
+    public Lecture findById(Long id) {
+        return repository.findById(id).orElseThrow();
     }
 
     @Override

@@ -29,8 +29,8 @@ private final InMemoryLectureDAO repository;
     }
 
     @Override
-    public Optional<Lecture> findById(Long id) {
-        return Optional.ofNullable(repository.findById(id));
+    public Lecture findById(Long id) {
+        return repository.findById(id);
     }
 
     @Override

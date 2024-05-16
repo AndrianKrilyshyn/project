@@ -10,7 +10,7 @@ import java.util.Optional;
 
 @RestController
 @AllArgsConstructor
-@RequestMapping("/api/v1/backend")
+@RequestMapping("/api/v1/lectures")
 public class LectureController {
     private LectureService service;
 
@@ -19,13 +19,12 @@ public class LectureController {
        return service.findAll();
     }
     @GetMapping("id/{id}")
-    public Optional<Lecture> findById(@PathVariable Long id){
+    public Lecture findById(@PathVariable Long id){
         return service.findById(id);
     }
     @GetMapping("gr/{group}")
-    public Lecture findByGroupName(String group){
-        Lecture lecture = service.findByGroupName(group);
-        return lecture;
+    public Lecture findByGroupName(@PathVariable String group){
+       return service.findByGroupName(group);
     }
     @PostMapping("save_lecture")
     public Lecture saveLecture(@RequestBody Lecture lecture){
