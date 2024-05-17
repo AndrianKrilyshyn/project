@@ -1,6 +1,8 @@
 package com.lpnu.springBackEnd.impl;
 
+import com.lpnu.springBackEnd.model.Task;
 import com.lpnu.springBackEnd.model.User;
+import com.lpnu.springBackEnd.repository.TaskRepository;
 import com.lpnu.springBackEnd.repository.UserRepository;
 import com.lpnu.springBackEnd.service.UserService;
 import jakarta.transaction.Transactional;
@@ -14,6 +16,10 @@ import java.util.List;
 @AllArgsConstructor
 public class UserImpl implements UserService {
     private final UserRepository repository;
+//    private final TaskRepository taskRepository;
+//    @Override
+//    public List<Task> getAllTasks(){
+//        return taskRepository.findAll();}
     @Override
     public User getById(@PathVariable Long id) {
         return repository.findById(id).orElseThrow();

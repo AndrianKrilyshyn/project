@@ -23,6 +23,7 @@ public class Task {
     private String description;
 
     private LocalDate deadline;
+    private String status;
 
 
 }

@@ -1,6 +1,7 @@
 package com.lpnu.springBackEnd.controller;
 
 import com.lpnu.springBackEnd.model.Lecture;
+import com.lpnu.springBackEnd.model.Task;
 import com.lpnu.springBackEnd.model.User;
 import com.lpnu.springBackEnd.service.UserService;
 import lombok.AllArgsConstructor;
@@ -35,4 +36,9 @@ public class UserController {
     public void deleteUser(@PathVariable Long id){
         service.deleteUser(id);
     }
+
+//    @GetMapping("get_tasks")
+//    public List<Task> getAllTasks(){
+//        return service.getAllTasks();
+//    }
 }

@@ -29,7 +29,9 @@ public class User {
 
     @Column( length = 50, unique = true)
     private String email;
-    @Column(length = 10)
-    private String groupName;
+
+    @ManyToOne
+    @JoinColumn(name = "group_id")
+    private Group group;
 
 }
