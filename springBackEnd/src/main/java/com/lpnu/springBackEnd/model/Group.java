@@ -9,6 +9,7 @@ import java.util.List;
 @Entity
 @Getter
 @Setter
+@Table(name = "`group`")
 public class Group {
 
     @Id
@@ -17,8 +18,6 @@ public class Group {
     @Column(length = 10)
     private String name;
     @ManyToMany
-    @JoinTable(name="group_lecture",
-            joinColumns=  @JoinColumn(name="group_id", referencedColumnName="id"),
-            inverseJoinColumns= @JoinColumn(name="lecture_id", referencedColumnName="id") )
+
     private List<Lecture> lectures;
 }
