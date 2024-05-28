@@ -46,4 +46,9 @@ public class LectureImpl implements LectureService {
     public void deleteLecture(Long id) {
         repository.deleteById(id);
     }
+
+    @Override
+    public List<Lecture> findAllByGroupName(String group) {
+        return repository.findAllByGroupName(group);
+    }
 }

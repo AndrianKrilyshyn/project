@@ -26,6 +26,10 @@ public class LectureController {
     public Lecture findByGroupName(@PathVariable String group){
        return service.findByGroupName(group);
     }
+    @GetMapping("grs/{group}")
+    public List<Lecture>  findAllByGroupName(@PathVariable String group){
+        return service.findAllByGroupName(group);
+    }
     @PostMapping("save_lecture")
     public Lecture saveLecture(@RequestBody Lecture lecture){
         return service.addLecture(lecture);
