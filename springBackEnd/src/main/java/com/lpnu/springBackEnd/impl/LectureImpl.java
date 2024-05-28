@@ -51,4 +51,9 @@ public class LectureImpl implements LectureService {
     public List<Lecture> findAllByGroupName(String group) {
         return repository.findAllByGroupName(group);
     }
+
+    @Override
+    public List<Lecture> findAllByGroupNameAndDayOfWeek(String group, String dayOfWeek) {
+        return repository.findAllByGroupNameAndDayOfWeek(group, dayOfWeek);
+    }
 }

@@ -30,6 +30,10 @@ public class LectureController {
     public List<Lecture>  findAllByGroupName(@PathVariable String group){
         return service.findAllByGroupName(group);
     }
+    @GetMapping("gr/{group}/{dayOfWeek}")
+    public List<Lecture>  findAllByGroupNameAndDayOfWeek(@PathVariable String group, @PathVariable String dayOfWeek){
+        return service.findAllByGroupNameAndDayOfWeek(group, dayOfWeek);
+    }
     @PostMapping("save_lecture")
     public Lecture saveLecture(@RequestBody Lecture lecture){
         return service.addLecture(lecture);

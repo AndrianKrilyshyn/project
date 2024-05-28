@@ -15,4 +15,5 @@ public interface LectureService {
     Lecture updateLecture(Lecture lecture);
     void deleteLecture(Long id);
     public List<Lecture> findAllByGroupName( String group);
+    List<Lecture>  findAllByGroupNameAndDayOfWeek( String group,  String dayOfWeek);
 }
